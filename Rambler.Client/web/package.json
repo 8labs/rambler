@@ -1,0 +1,42 @@
+{
+  "name": "rambler-client-angularjs",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch",
+    "serve": "http-server build",
+    "build": "gulp prod",
+    "uat": "gulp uat",
+    "health": "gulp health"
+  },
+  "private": true,
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-animate": "^1.8.2",
+    "angular-cookies": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "angular-touch": "^1.8.2",
+    "ngstorage": "^0.3.11"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.8.1",
+    "@types/angular-cookies": "^1.8.0",
+    "@types/angular-route": "^1.7.1",
+    "@types/bugsnag": "^2.5.28",
+    "@types/google.analytics": "0.0.37",
+    "@types/ngstorage": "~0.3.36",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-inject": "^5.0.5",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "http-server": "^0.11.1",
+    "opn": "^4.0.2",
+    "sw-precache": "^5.2.1",
+    "typescript": "^2.9.2"
+  }
+}

@@ -1,0 +1,20 @@
+<div class="modal-backdrop channel-ban-modal" ng-cloak>
+  <div class="popup full-popup">
+    <p ng-if="ctrl.channelBan.Level === 0">You are banning {{ctrl.channelBan.Nick}}</p>
+    <p ng-if="ctrl.channelBan.Level === 1">You are warning {{ctrl.channelBan.Nick}}</p>
+    <input type="text" ng-model="ctrl.channelBan.Reason" placeholder="Reason (e.g. swearing)" />
+    <p ng-if="ctrl.channelBan.Level === 0">This ban expires on:</p>
+    <p ng-if="ctrl.channelBan.Level === 1">This warning expires on:</p>
+    <p ng-class="{disabled: ctrl.banLength === 365}">
+      <img src="assets/images/calendar.svg" />{{ctrl.channelBan.Expires | localDateFilter}}</p>
+    <ul ng-if="ctrl.channelBan.Level === 0">
+      <li ng-click="ctrl.setBanLength(1)" ng-class="{active: ctrl.banLength === 1}">One Day</li>
+      <li ng-click="ctrl.setBanLength(7)" ng-class="{active: ctrl.banLength === 7}">One Week</li>
+      <li ng-click="ctrl.setBanLength(30)" ng-class="{active: ctrl.banLength === 30}">One Month</li>
+      <li ng-click="ctrl.setBanLength(365)" ng-class="{active: ctrl.banLength === 365}">Permanent</li>
+    </ul>
+    <button class="solid" ng-click="ctrl.saveBan()" ng-if="ctrl.channelBan.Level === 0">Ban</button>
+    <button class="solid" ng-click="ctrl.saveBan()" ng-if="ctrl.channelBan.Level === 1">Warn</button>
+    <button class="outline" ng-click="ctrl.cancelBan()">Cancel</button>
+  </div>
+</div>

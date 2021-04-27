@@ -1,0 +1,15 @@
+<div class="emoji-box">
+  <ul>
+    <li ng-click="ctrl.fetchEmojis('People');" ng-class="{active: ctrl.selectedEmojiCategory === 'People' }">People</li>
+    <li ng-click="ctrl.fetchEmojis('Activity');" ng-class="{active: ctrl.selectedEmojiCategory === 'Activity' }">Activity</li>
+    <li ng-click="ctrl.fetchEmojis('Symbols');" ng-class="{active: ctrl.selectedEmojiCategory === 'Symbols' }">Symbols</li>
+    <li ng-click="ctrl.fetchEmojis('Objects');" ng-class="{active: ctrl.selectedEmojiCategory === 'Objects' }">Objects</li>
+    <li ng-click="ctrl.fetchEmojis('Travel');" ng-class="{active: ctrl.selectedEmojiCategory === 'Travel' }">Travel</li>
+    <li ng-click="ctrl.fetchEmojis('Food');" ng-class="{active: ctrl.selectedEmojiCategory === 'Food' }">Food</li>
+  </ul>
+  <div>
+    <ul>
+      <li ng-repeat="emoji in ctrl.emojis" ng-click="ctrl.insertEmoji(emoji.value);">{{ emoji.value }}</li>
+    </ul>
+  </div>
+</div>

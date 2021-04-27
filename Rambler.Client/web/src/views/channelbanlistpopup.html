@@ -1,0 +1,29 @@
+<div class="modal-backdrop channel-ban-modal" ng-cloak>
+  <div class="popup full-popup">
+    <h1>Bans</h1>
+    <div class="bans">
+
+      <ul>
+        <li ng-repeat-start="ban in ctrl.banList | orderBy:['!Level','Nick']" ng-click="ctrl.selectedBan = ban;" ng-class="{active: ctrl.selectedBan.Id === ban.Id}">
+          <label>{{ban.Level == 0 ? 'Ban' : 'Warning' }}: {{ ban.Nick }}</label>
+          <div>
+            <p>{{ ban.CreatedBy || 'TheUnknownModerator' }}</p>
+            <p>{{ ban.Expires | localDateFilter }}</p>
+          </div>
+        </li>
+        <li class="detail active" ng-show="ctrl.selectedBan.Id === ban.Id">
+          <label>{{ ban.Reason }}</label>
+          <img class="delete" src="assets/images/delete.svg" ng-click="removingBan = ban" />
+        </li>
+        <li class="confirm" ng-repeat-end ng-show="removingBan === ban">
+          <p>Are you sure about that?</p>
+          <div>
+            <button class="danger" ng-click="removingBan = undefined; ctrl.removeBan(ban)">Yep</button>
+            <button ng-click="removingBan = undefined;">Maybe Not</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="solid" ng-click="ctrl.cancelEditBans()">Finished</button>
+  </div>
+</div>

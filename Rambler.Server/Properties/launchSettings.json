@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Rambler.Server": {
+      "commandName": "Project",
+      "workingDirectory": ".",
+      "environmentVariables": {
+        "Logging__LogLevel__Default": "Debug",
+        "ASPNETCORE_URLS": "http://0.0.0.0:5000",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "RAMBLER_HOSTCLIENT": "../Rambler.Client/web"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/login.css" />
+
+<div class="login">
+  <div class="modal-backdrop" ng-if="ctrl.registered">
+    <div class="popup pink-circles">
+      <h3 style="text-align: center; color: #ffffff;">We’ve sent you an email!</h3>
+      <img src="assets/images/mailicon.svg" style="max-height: 20%;" />
+      <p>We know waiting is boring. We just need to verify your email address to keep the chat safe.</p>
+      <button class="pink horizontal-buttons" ng-click="ctrl.goWait()">Ok! I’ll wait!</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" ng-if="ctrl.registering">
+    <div class="popup pink-circles">
+      <h3 style="text-align: center; color: #ffffff;">Hold on just a moment!</h3>
+      <p>I'm just attempting to register that account for you....</p>
+    </div>
+  </div>
+
+  <div class="box" ng-if="!ctrl.registered && !ctrl.registering">
+    <form name="ctrl.resetForm" novalidate ng-submit="ctrl.reset()">
+      <input
+        name="pass"
+        type="password"
+        ng-model="ctrl.resetRequest.NewPassword"
+        placeholder="Password"
+        required
+        required
+        pattern=".{6,}"
+      />
+      <label ng-show="ctrl.resetForm.pass.$touched && ctrl.resetForm.pass.$error.required"
+        >Please enter a password.</label
+      >
+      <label ng-show="ctrl.resetForm.pass.$touched && ctrl.resetForm.pass.$error.pattern"
+        >Passwords need to be at least 6 characters long.</label
+      >
+      <input
+        name="passconfirm"
+        type="password"
+        ng-model="ctrl.resetRequest.NewPasswordVerify"
+        placeholder="Confirm Password"
+        required
+      />
+      <label
+        ng-show="ctrl.resetForm.passconfirm.$touched && ctrl.resetRequest.NewPassword !== ctrl.resetRequest.NewPasswordVerify"
+        >Your passwords don't match.</label
+      >
+      <input type="hidden" ng-model="ctrl.resetRequest.Captcha" required />
+      <div class="error" ng-show="ctrl.error">
+        {{ ctrl.errorMessage }} <span ng-click="ctrl.clearErrors()" class="close">&times;</span>
+      </div>
+
+      <div recaptcha="ctrl.onCaptcha($token)"></div>
+
+      <div class="buttons">
+        <button
+          type="submit"
+          class="solid"
+          ng-disabled="ctrl.resetForm.$invalid || ctrl.resetRequest.NewPassword !== ctrl.resetRequest.NewPasswordVerify"
+        >
+          Reset Password
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

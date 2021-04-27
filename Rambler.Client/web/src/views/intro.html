@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="css/intro.css" />
+
+<div class="intro">
+  <div class="box">
+    <div class="contents">
+      <div class="greeting">
+        <div class="logo">
+          <img src="assets/images/ewclogo.svg" />
+        </div>
+        <h1>Welcome to Rambler.</h1>
+        <p>Come chat with us! It's all 🦄s and 🌈s in here.</p>
+        <p>Chatting for free has never been easier. Give it a spin today from your desktop or smart phone.</p>
+      </div>
+      <div class="buttons" ng-if="!ctrl.showCaptcha">
+        <!-- <button class="outline" ng-click="ctrl.loginSocial('Facebook')">Continue with Facebook</button> -->
+        <button class="outline" ng-click="ctrl.login()">Login</button>
+        <button class="solid" ng-click="ctrl.createAccount()">Create Account</button>
+        <p>or start out as a guest</p>
+        <button class="solid" ng-click="ctrl.guestLogin()">Be Our Guest</button>
+      </div>
+      <div ng-if="ctrl.showCaptcha" class="buttons">
+        <div recaptcha="ctrl.onCaptcha($token)"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marketing">
+    <div class="sidebyside">
+      <div class="text">
+        <h1>Chat on the go</h1>
+        <p>
+          Chatting for free on your phone has never been easier. Our chat works great on Android phones and tablets,
+          iPhones, iPads, Windows, Mac, Chromebooks, you name it! No install required. Just start chatting.
+        </p>
+      </div>
+      <div class="centred">
+        <img src="assets/images/screenshots/chat.jpg" />
+      </div>
+    </div>
+    <div class="sidebyside">
+      <div class="centred">
+        <img src="assets/images/screenshots/roomlist.jpg" />
+      </div>
+      <div class="text">
+        <h1>Never miss a beat</h1>
+        <p>
+          We don’t want you to miss a thing, so our mobile chat and desktop chat work together to make sure you see it
+          all. Any messages you send in one will be ready for you in the other. So switching from one device to the
+          other is seamless!
+        </p>
+      </div>
+    </div>
+    <div class="sidebyside">
+      <div class="text">
+        <h1>Get your own chat room</h1>
+        <p>
+          What’s better than finding a bunch of really great chats? Being able to create your own room to chat about
+          anything you want. Meet up with your friends, make new ones. Build a community of great people who love to
+          chat just as much as you do! American chat? German chat? Cat chat? Hat chat? We love to help friendly chats of
+          all sorts from all over the world.
+        </p>
+      </div>
+      <div class="centred">
+        <button ng-click="ctrl.createAccount()">Chat Now!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fine-print">
+    By the way, we use cookies. By registering or using this system you agree to our
+    <a href ng-click="showTOS = true;">Terms of Service</a>, and any delicious cookies we decide to stuff your browser
+    with. 🍪
+  </div>
+
+  <div ng-include="'views/tos.html'" ng-show="showTOS"></div>
+</div>

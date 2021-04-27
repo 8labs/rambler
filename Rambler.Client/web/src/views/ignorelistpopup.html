@@ -1,0 +1,24 @@
+<div class="modal-backdrop channel-ban-modal" ng-cloak>
+  <div class="popup full-popup">
+    <h1>Ignores</h1>
+    <div class="bans">
+      <ul>
+        <li ng-repeat-start="ignore in ctrl.userSettings.Ignores | orderBy:['Nick']" ng-click="ctrl.selectedIgnore = ignore;" ng-class="{active: ctrl.selectedIgnore.Id === ignore.Id}">
+          <label>{{ ignore.IgnoreNick }}</label>
+        </li>
+        <li class="detail active" ng-show="ctrl.selectedIgnore.Id === ignore.Id">
+          <label>Ignored on: {{ ignore.IgnoredOn | localDateFilter }}</label>
+          <img class="delete" src="assets/images/delete.svg" ng-click="removingIgnore = ignore" />
+        </li>
+        <li class="confirm" ng-repeat-end ng-show="removingIgnore === ignore">
+          <p>Are you sure about that?</p>
+          <div>
+            <button class="danger" ng-click="removingIgnore = undefined; ctrl.removeIgnore(ignore)">Yep</button>
+            <button ng-click="removingIgnore = undefined;">Maybe Not</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="solid" ng-click="ctrl.closeIgnoreList()">Finished</button>
+  </div>
+</div>

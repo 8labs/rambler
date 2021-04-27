@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Squiddy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Squidy" transform="translate(11.000000, 3.000000)">
+            <path d="M11,0 C19,7.33333333 23,13.3333333 23,18 C23,25 17.8114483,27.2611822 17,29 C16.4590344,30.1592119 16.4590344,31.4925452 17,33 C20.3333333,34.3333333 22,35.3333333 22,36 C22,37 18.2600253,36.3150063 17,36 C15.7399747,35.6849937 13.7520392,31.7493203 13,32 C12.2479608,32.2506797 12.2137031,38 11.5,38 C10.7862969,38 11.3662569,32 10,32 C8.63374314,32 9.21648391,34.891758 7,36 C4.78351609,37.108242 2.23644911,36.7093473 2,36 C1.84236726,35.5271018 3.17570059,34.5271018 6,33 C6.66666667,33 6.66666667,31.6666667 6,29 C5,25 2.96746135e-16,26 0,18 C0,12.6666667 3.66666667,6.66666667 11,0 Z" id="Path" fill="url(#linearGradient-1)"></path>
+            <ellipse id="Oval" fill="#FFFFFF" cx="12" cy="12.5" rx="5" ry="4.5"></ellipse>
+            <circle id="Oval-2" fill="#2D2D2D" cx="10.5" cy="13.5" r="2.5"></circle>
+            <ellipse id="Oval-3" fill-opacity="0.1" fill="#000000" cx="11.5" cy="22" rx="3.5" ry="1"></ellipse>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,46 @@
+@import 'common.scss';
+.channel-ban-modal {
+  > p {
+    text-align: center;
+    &.disabled {
+      color: rgba(255, 255, 255, 0.27);
+    }
+    img {
+      height: 1.25rem;
+      margin-right: 0.5rem;
+    }
+  }
+  input[type=text] {
+    font-family: $primary-font;
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 1.25rem 1rem;
+    color: #ffffff;
+    background: transparent;
+    -webkit-appearance: none;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    display: block;
+    width: calc(100% - 1rem);
+    &::placeholder {
+      font-family: $primary-font;
+      font-weight: 200;
+      color: #ffffff;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0.5rem;
+      width: calc(100% - 1rem);
+      text-align: center;
+      cursor: pointer;
+      &.active {
+        background: rgba(255, 255, 255, 0.27);
+      }
+    }
+  }
+}

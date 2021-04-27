@@ -1,0 +1,24 @@
+<div class="modal-backdrop channel-registration-modal" ng-cloak>
+  <div class="popup full-popup">
+    <h1 ng-show="ctrl.editingChannel.Id">{{ctrl.editingChannel.Name}} Configuration</h1>
+
+    <form name="ctrl.newRoomForm">
+      <input name="roomname" type="text" ng-model="ctrl.editingChannel.Name" placeholder="Room Name" requried pattern="[\w_-]{3,15}" ng-if="!ctrl.editingChannel.Id" />
+      <label class="validation" ng-show="ctrl.newRoomForm.roomname.$touched && ctrl.newRoomForm.roomname.$error.required">Sorry, we really do need a room name to create a new room.</label>
+      <label class="validation" ng-show="ctrl.newRoomForm.roomname.$touched && ctrl.newRoomForm.roomname.$error.pattern">Room names need to be 3-15 numbers, letters, - or _.</label>
+      <label>Room Description</label>
+      <textarea ng-model="ctrl.editingChannel.Description"></textarea>
+      <div class="checkbox-input">
+        <label>Allow Guests</label>
+        <input type="checkbox" ng-model="ctrl.editingChannel.AllowGuests" />
+      </div>
+      <div class="checkbox-input">
+        <label>Hide from Room List</label>
+        <input type="checkbox" ng-model="ctrl.editingChannel.IsSecret" ng-click="" />
+      </div>
+    </form>
+    <button class="solid" ng-click="ctrl.saveChannel()" ng-show="!ctrl.editingChannel.Id" ng-disabled="ctrl.newRoomForm.$invalid">Register Room</button>
+    <button class="solid" ng-click="ctrl.saveChannel()" ng-show="ctrl.editingChannel.Id">Update Settings</button>
+    <button class="outline" ng-click="ctrl.cancelEditChannel()">Cancel</button>
+  </div>
+</div>

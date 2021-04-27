@@ -1,0 +1,94 @@
+@import 'common.scss';
+.channel-list-modal {
+  .popup {
+    display: flex;
+    flex-direction: column;
+    >.header {
+      display: flex;
+      margin: 0;
+      height: 7rem;
+      @media only screen and (max-width: 750px) {
+        height: 5rem;
+      }
+      .close {
+        flex-grow: 1;
+        flex: 0 0 1;
+        font-family: $primary-font;
+        font-size: 2rem;
+        padding-left: 1rem;
+        cursor: pointer;
+      }
+      .actions {
+        display: flex;
+        .action-input {
+          input[type=text] {
+            font-family: 'Muli', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.25);
+            margin: 0.25rem 1.5rem;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            -webkit-appearance: none;
+            padding: 0.5rem;
+            border: none;
+            display: block;
+            width: 100%;
+            &::placeholder {
+              font-family: 'Muli', sans-serif;
+              font-weight: 200;
+              color: #ffffff;
+            }
+          }
+        }
+        img {
+          height: 1.25rem;
+          margin-top: 0.75rem;
+          margin-left: 1rem;
+        }
+        .search {
+          margin-right: 1rem;
+        }
+      }
+    }
+    p {
+      margin-top: 50%;
+      a,
+      a:visited,
+      a:active {
+        color: #ffffff;
+      }
+    }
+    .list {
+      overflow-y: auto;
+      margin: 1rem 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 1rem;
+      padding: 0;
+      @include no-selection();
+      li {
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+        padding: 1rem 0;
+        .header {
+          font-size: 1rem;
+          display: flex;
+          .name {
+            flex-grow: 1;
+            flex: 0 0 1;
+          }
+          .usercount {}
+        }
+        .description {
+          font-size: 0.9rem;
+        }
+
+        a, a:active, a:visited {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

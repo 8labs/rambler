@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Chubby</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A2D7F3" offset="0%"></stop>
+            <stop stop-color="#058ACA" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 C1.4667107,2.66666667 3.13337737,4 5,4 C6.86662263,4 8.86662263,2.66666667 11,0 C8.70017701,0.666666667 6.70017701,1 5,1 C3.29982299,1 1.63315632,0.666666667 0,0 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chubby" transform="translate(8.000000, 7.000000)">
+            <path d="M15,30 C18.7550419,30 20.3688426,34.2802386 23,32 C26.1736304,29.2496383 30,19.5292293 30,15 C30,6.71572875 23.2842712,0 15,0 C6.71572875,0 0,6.71572875 0,15 C0,19.4468836 3.92597778,29.2531468 7,32 C9.65269257,34.3703657 11.1626123,30 15,30 Z" id="Oval-4" fill="url(#linearGradient-1)"></path>
+            <circle id="Oval-5" fill="#2D2D2D" cx="10.5" cy="11.5" r="1.5"></circle>
+            <circle id="Oval-5" fill="#2D2D2D" cx="22.5" cy="11.5" r="1.5"></circle>
+            <g id="Rectangle-+-Rectangle-Mask" transform="translate(12.000000, 17.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="#2D2D2D" xlink:href="#path-2"></use>
+                <path d="M4.5,0 L4.5,0 C4.77614237,-5.07265313e-17 5,0.223857625 5,0.5 L5,1.5 C5,1.77614237 4.77614237,2 4.5,2 L4.5,2 C4.22385763,2 4,1.77614237 4,1.5 L4,0.5 C4,0.223857625 4.22385763,5.07265313e-17 4.5,0 Z" id="Rectangle" fill="#FFFFFF" mask="url(#mask-3)"></path>
+                <path d="M5.5,0 L5.5,0 C5.77614237,-5.07265313e-17 6,0.223857625 6,0.5 L6,1.5 C6,1.77614237 5.77614237,2 5.5,2 L5.5,2 C5.22385763,2 5,1.77614237 5,1.5 L5,0.5 C5,0.223857625 5.22385763,5.07265313e-17 5.5,0 Z" id="Rectangle" fill="#FFFFFF" mask="url(#mask-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

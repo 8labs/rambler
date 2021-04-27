@@ -1,0 +1,138 @@
+@import 'common.scss';
+.chat {
+  .header {
+    display: block;
+    >div {
+      display: flex;
+    }
+    .logo {
+      position: relative;
+      img {
+        height: 1.5rem;
+        margin-top: 0.75rem;
+        margin-left: 1rem;
+      }
+      &.desktop-only {
+        @media only screen and (max-width: 750px) {
+          display: none;
+        }
+      }
+      &.mobile-only {
+        @media only screen and (min-width: 751px) {
+          display: none;
+        }
+      }
+      .unread {
+        position: absolute;
+        background: $popup-button;
+        border-radius: 1em;
+        margin-top: 0.65rem;
+        height: 1em;
+        width: 1em;
+        margin-left: 0.75rem;
+      }
+    }
+    .title {
+      color: #ffffff;
+      font-size: 1.25rem;
+      line-height: 3rem;
+      font-family: $secondary-font;
+      margin-left: 1rem;
+      &.primary {
+        flex-grow: 1;
+        flex: 0 0 1;
+      }
+      @media only screen and (max-width: 750px) {
+        text-align: center;
+        margin-left: 0;
+        flex-grow: 1;
+        flex: 0 0 1;
+      }
+    }
+    .description {
+      flex-grow: 1;
+      flex: 0 0 1;
+      color: #ffffff;
+      line-height: 3rem;
+      max-height: 3rem;
+      margin-left: 2rem;
+      font-size: 0.9rem;
+      overflow: hidden;
+      font-family: $primary-font;
+      font-weight: 200;
+      @media only screen and (max-width: 750px) {
+        display: none;
+      }
+      a {
+        color: #fff;
+        text-decoration: underline;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .close {
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 1.5rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      font-family: $secondary-font;
+      cursor: pointer;
+      @include no-selection();
+    }
+    .menu-mobile {
+      margin-right: 1rem;
+      margin-top: 1rem;
+      img {
+        @media only screen and (min-width: 751px) {
+          display: none;
+        }
+        height: 1.5rem;
+        fill: #ffffff;
+      }
+    }
+    .icon {
+      cursor: pointer;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      position: relative;
+      @media only screen and (max-width: 750px) {
+        // display: none;
+      }
+      img {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: #ffffff;
+      }
+    }
+    .menu-desktop {
+      &.icon {
+        @media only screen and (max-width: 750px) {
+          margin-top: 0.75rem;
+        }
+      }
+      .menu {
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        background: $black-popup;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        z-index: 10001;
+        width: max-content;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            cursor: pointer;
+            font-family: $primary-font;
+            font-weight: 200;
+            padding: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<div class="chat-item" ng-repeat="m in messages | filter : filterIgnores track by m.Id" ng-switch on="m.Type" ng-init="u = getUser(m.Data.UserId)">
+  <div class="timestamp">{{ m.Timestamp | date:'EEE h:mma' }} </div>
+  <div class="chat-bubble" ng-class="{highlight: u.id === selectedUser.id, offline: !userInRoom(m.Data.UserId)}">
+    <!-- <div class="avatar">{{u.avatar}}</div> -->
+    <div ng-switch-when="CHJOIN" class="chat-text">
+      <div class="text">
+        {{ u.isSelf ? 'You' : u.nick }} joined
+      </div>
+    </div>
+    <div ng-switch-when="CHPART" class="chat-text">
+      <div class="text">
+        {{ u.isSelf ? 'You' : u.nick }} left
+      </div>
+    </div>
+    <div ng-switch-when="CHBAN" class="chat-text">
+      <div class="text" ng-if="m.Data.Level === 0">
+        {{ u.isSelf ? 'You' : u.nick }} was banned for "{{m.Data.Reason}}"
+      </div>
+      <div class="text" ng-if="m.Data.Level === 1">
+        {{ u.isSelf ? 'You' : u.nick }} was warned for "{{m.Data.Reason}}"
+      </div>
+      <div class="text" ng-if="m.Data.Level === 2">
+        {{ u.isSelf ? 'You' : u.nick }} was muted for "{{m.Data.Reason}}"
+      </div>
+    </div>
+    <div ng-switch-when="CHMSG" class="chat-text" ng-class="{self: u.isSelf, notice: m.Data.Type=='NOTIF'}">
+      <div class="name">{{u.nick}}</div>
+      <div class="text">
+        <span ng-bind-html="m.Data.Message | profanity | linky:'_blank':{rel: 'nofollow'}"></span>
+
+        <!-- <div ng-show="getYouTubeLink(m.Data.Message)[0]" class="youtube-link">
+          <a ng-href="getYouTubeLink(m.Data.Message)[0]" target="_blank">
+            <img ng-src="https://img.youtube.com/vi/{{getYouTubeLink(m.Data.Message)[1]}}/0.jpg" />
+          </a>
+        </div> -->
+      </div>
+    </div>
+    <div ng-switch-when="DM" class="chat-text" ng-class="{self: u.isSelf}">
+      <div class="name">{{u.nick}}</div>
+      <div class="text">
+        {{m.Data.Message | profanity}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="new-messages" ng-show="newMessages" ng-click="scrollToBottom()">View New Messages</div>
+
+<div ng-transclude></div>

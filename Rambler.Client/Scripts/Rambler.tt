@@ -1,0 +1,15 @@
+﻿<#@ template debug="true" hostspecific="True" language="C#" #>
+<#@ assembly name="$(TargetDir)TypeLite.dll" #>
+<#@ assembly name="$(TargetDir)TypeLite.Net4.dll" #>
+<#@ assembly name="$(TargetDir)$(TargetFileName)" #>
+
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="TypeLite" #> 
+<#@ import namespace="TypeLite.Net4" #> 
+<#@ import namespace="Rambler.Client.Scripts" #> 
+<#@output extension=".d.ts"#>
+
+
+<#=(TypeLiteUtil.GuidString())#>
+
+<#=(TypeLiteUtil.Generate())#>

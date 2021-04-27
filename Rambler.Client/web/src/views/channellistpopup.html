@@ -1,0 +1,46 @@
+<div class="modal-backdrop channel-list-modal" ng-cloak>
+  <div class="popup full-popup">
+    <div class="header">
+      <div class="close" ng-click="ctrl.channelListOpen = false; ctrl.showChannelSearch = false; ctrl.showChannelAdd = false; ctrl.channelSearchTerm = ''">
+        &times;
+      </div>
+      <div class="actions">
+        <div class="add" ng-click="ctrl.addNewChannel()" ng-show="!ctrl.showChannelSearch">
+          <img src="assets/images/plus.svg" />
+        </div>
+        <div class="action-input">
+          <input type="text" placeholder="Search for a room..." ng-model="ctrl.channelSearchTerm" ng-change="ctrl.updateChannelSearch()" focus-on="ctrl.showChannelSearch"
+            ng-model-options='{ debounce: 750 }' />
+        </div>
+        <div class="search" ng-click="ctrl.showChannelSearch = !ctrl.showChannelSearch;" ng-show="!ctrl.showChannelAdd">
+          <img src="assets/images/magnify.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div ng-show="ctrl.channels.length === 0 && !ctrl.channelSearchingDb">
+        <p>We didn't find any open channels that match. Would you like to <a href ng-click="ctrl.fetchDbChannelSearch()">search closed rooms</a>?</p>
+      </div>
+      <div ng-show="ctrl.channels.length === 0 && ctrl.channelSearchingDb">
+        <p>We didn't find any registered channels that match. Would you like to <a href ng-click="ctrl.addNewChannel()">register a new room</a>?</p>
+      </div>
+      <ul ng-show="ctrl.channels.length > 0">
+        <li ng-repeat="channel in ctrl.channels | orderBy:['-UserCount','Name']" ng-click="ctrl.joinChannel(channel)">
+          <div class="header">
+            <div class="name">
+              {{ channel.Name }}
+            </div>
+            <div class="usercount">
+              {{ channel.UserCount }}/{{ (channel.MaxUsers ? channel.MaxUsers : (1.7976931348623157e+309)) | number: 0 }}
+            </div>
+          </div>
+          <div class="description">
+            {{ channel.Description }}
+          </div>
+        </li>
+        <li ng-show="ctrl.channelSearchTerm.length > 1 && !ctrl.channelSearchingDb">Didn't see what you were looking for? <a href ng-click="ctrl.fetchDbChannelSearch()">Search closed rooms</a>.</li>
+        <li ng-show="(!ctrl.channelSearchTerm || ctrl.channelSearchTerm.length === 0) && !ctrl.channelSearchingDb">Didn't see what you were looking for? Try searching for a room with the magnifying glass.</li>
+      </ul>
+    </div>
+  </div>
+</div>

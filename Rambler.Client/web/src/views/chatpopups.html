@@ -1,0 +1,46 @@
+<div class="modal-backdrop" ng-if="ctrl.chat.state.error_code">
+  <div class="popup pink-circles" ng-switch on="ctrl.chat.state.error_code">
+    <p ng-switch-when="0">You can't send messages in rooms you're not in.</p>
+    <p ng-switch-when="1">Looks like you need to log back in.</p>
+    <p ng-switch-when="2">Sorry, that nickname is in use!</p>
+    <p ng-switch-when="3">Sorry, that nickname is invalid! Nicknames need to be letters or numbers and between 1 and 15 characters long.</p>
+    <p ng-switch-when="4">Sorry, I couldn't find a room that matched that.</p>
+    <p ng-switch-when="6">You're already in that room...</p>
+    <p ng-switch-when="7">Sorry, guests aren't allowed in that room.</p>
+    <button class="pink horizontal-buttons" ng-click="ctrl.clearError();">Oh... Thanks!</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="ctrl.chat.state.ban">
+  <div class="popup pink-circles" ng-switch on="ctrl.chat.state.ban.Level">
+    <p ng-switch-when="0">You've been banned from {{ctrl.chat.state.ban.ChannelName}}.</p>
+    <p ng-switch-when="1">You've been warned in {{ctrl.chat.state.ban.ChannelName}}.</p>
+    <p ng-if="ctrl.chat.state.ban.Reason">Reason: {{ctrl.chat.state.ban.Reason}}</p>
+    <button class="pink horizontal-buttons" ng-click="ctrl.clearBanNotice();">Oh... Sorry!</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="ctrl.serverBanReason">
+  <div class="popup pink-circles">
+    <p>You've been banned from Everywhere Chat.</p>
+    <p>{{ctrl.serverBanReason}}</p>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="ctrl.confirmModerator">
+  <div class="popup pink-circles">
+    <p>Just to confirm, you want to make {{ ctrl.contextUser.nick }} a moderator of {{ ctrl.chat.state.channel.name}}?</p>
+    <div class="horizontal-buttons">
+      <button ng-click="ctrl.addModerator(ctrl.contextUser)">Yep</button>
+      <button class="white" ng-click="ctrl.confirmModerator = false;">Oops! No!</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="ctrl.error">
+  <div class="popup pink-circles">
+    <h3>That's a shame. Something went wrong.</h3>
+    <p>{{ctrl.error}}</p>
+    <button class="pink horizontal-buttons" ng-click="ctrl.clearError();">Thanks</button>
+  </div>
+</div>

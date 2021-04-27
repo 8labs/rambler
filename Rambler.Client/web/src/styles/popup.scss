@@ -1,0 +1,92 @@
+@import 'common.scss';
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.46);
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup.pink-circles {
+  background-image: linear-gradient(-35deg, #895EE4 0%, #CD7994 100%);
+  background-image: url('../assets/images/popupcircles.svg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.popup {
+  z-index: 10001;
+  box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 1rem;
+  width: max-content;
+  height: max-content;
+  padding: 2rem 5rem;
+  max-width: 70%;
+  max-height: 70%;
+  font-family: $primary-font;
+  font-weight: 200;
+  position: relative;
+  @media only screen and (max-width: 750px) {
+    padding: 2rem;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  p {
+    font-family: $primary-font;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .horizontal-buttons {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    button {
+      margin-left: 0;
+      transform: none;
+    }
+  }
+}
+
+.full-popup {
+  border-radius: 0.5rem;
+  background: $app-popup-background;
+  background-size: cover;
+  background-position: center;
+  width: 350px !important;
+  height: 500px !important;
+  padding: 1rem;
+  color: #ffffff;
+  @media only screen and (max-width: 750px) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    height: calc(100% - 2rem) !important;
+    width: calc(100% - 2rem) !important;
+  }
+}
+
+.simple-layout {
+  display: flex;
+  flex-direction: column;
+  .body {
+    flex-grow: 1;
+    flex: 0 0 1;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="305px" viewBox="0 0 375 305" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Crazyblue Theme</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="375" height="305"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="77.111689%" id="linearGradient-3">
+            <stop stop-color="#21294F" offset="0%"></stop>
+            <stop stop-color="#51456E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="3.87012283%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#3F9CBC" offset="0%"></stop>
+            <stop stop-color="#3F81BC" stop-opacity="0.738337862" offset="32.809793%"></stop>
+            <stop stop-color="#6026A6" stop-opacity="0.348675272" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-5" x="0" y="0" width="320" height="80" rx="24"></rect>
+        <rect id="path-7" x="0" y="0" width="320" height="80" rx="24"></rect>
+    </defs>
+    <g id="Crazyblue-Theme" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Login-Background">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="374" height="304"></rect>
+            </g>
+            <g id="Mountain-Background-Vector" mask="url(#mask-2)" fill-rule="evenodd">
+                <g transform="translate(-353.000000, 0.000000)">
+                    <g id="Background" stroke-width="1">
+                        <rect id="Backdrop" fill="url(#linearGradient-3)" x="0.813711911" y="0" width="1171.74515" height="305"></rect>
+                        <polygon id="Path" fill-opacity="0.6" fill="#6F6E6F" points="0.458211893 209.244401 137.74202 162.066726 237.009456 180.941253 497.754769 155.883616 718.920139 185.034088 1172.55886 304.947007 0.458211893 304.947007"></polygon>
+                        <polygon id="Path-2" fill-opacity="0.3" fill="#9C9C9C" points="498.149807 158.879556 286.538367 304.504045 1147.55174 304.504045 692.395693 188.683375"></polygon>
+                        <polygon id="Path-3" fill-opacity="0.2" fill="#8D8D8D" points="3.94502794 224.521209 1174.55584 304.918917 3.94502794 304.918917"></polygon>
+                        <polygon id="Path-3" fill-opacity="0.15" fill="#8E8E8E" points="1174.55584 224.521209 1174.55584 304.918917 3.94502794 304.918917"></polygon>
+                    </g>
+                    <g id="Gradient\Blue-Purple">
+                        <rect id="Gradient-Copy-2" fill="url(#linearGradient-4)" x="0" y="0" width="1175" height="305"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Chat-Bubble" transform="translate(17.000000, 58.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Mask" fill-opacity="0" fill="#3FBCA6" xlink:href="#path-5"></use>
+            <g id="Colour/Chatbox/Whitey" mask="url(#mask-6)" fill="#FFFFFF" fill-opacity="0.1">
+                <rect id="Rectangle" x="0" y="0" width="320" height="80"></rect>
+            </g>
+            <g id="Chat-Bubble-Name/Yellow" mask="url(#mask-6)" font-family="LucidaGrande-Bold, Lucida Grande" font-size="24" font-weight="bold">
+                <g transform="translate(25.000000, 9.000000)" id="chatter-name">
+                    <text>
+                        <tspan x="0" y="23" fill="#FEE28E">k</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Chat-Bubble-Text/White" mask="url(#mask-6)" font-family="LucidaGrande, Lucida Grande" font-size="20" font-weight="normal">
+                <g transform="translate(25.000000, 40.000000)" id="Just-some-text.">
+                    <text>
+                        <tspan x="0" y="19" fill="#FFFFFF">It's a grape!</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g id="Chat-Bubble" transform="translate(17.000000, 148.000000)">
+            <mask id="mask-8" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <use id="Mask" fill-opacity="0" fill="#3FBCA6" xlink:href="#path-7"></use>
+            <g id="Colour/Chatbox/Whitey" mask="url(#mask-8)" fill="#FFFFFF" fill-opacity="0.1">
+                <rect id="Rectangle" x="0" y="0" width="320" height="80"></rect>
+            </g>
+            <g id="Chat-Bubble-Name/Salmon" mask="url(#mask-8)" font-family="LucidaGrande-Bold, Lucida Grande" font-size="24" font-weight="bold">
+                <g transform="translate(25.000000, 9.000000)" id="chatter-name">
+                    <text>
+                        <tspan x="0" y="23" fill="#FE8E8E">j</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Chat-Bubble-Text/White" mask="url(#mask-8)" font-family="LucidaGrande, Lucida Grande" font-size="20" font-weight="normal">
+                <g transform="translate(25.000000, 40.000000)" id="Just-some-text.">
+                    <text>
+                        <tspan x="0" y="19" fill="#FFFFFF">It's the new ewc theme!</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g id="Header" transform="translate(0.000000, 10.000000)">
+            <g id="menu-hamburger" transform="translate(319.000000, 4.000000)" fill="#FFFFFF">
+                <g id="if_menu-alt_134216-(3)">
+                    <path d="M2,4 L26,4 C27.104,4 28,3.104 28,2 C28,0.896 27.104,0 26,0 L2,0 C0.896,0 0,0.896 0,2 C0,3.104 0.896,4 2,4 Z M26,8 L2,8 C0.896,8 0,8.896 0,10 C0,11.104 0.896,12 2,12 L26,12 C27.104,12 28,11.104 28,10 C28,8.896 27.104,8 26,8 Z M26,16 L2,16 C0.896,16 0,16.896 0,18 C0,19.104 0.896,20 2,20 L26,20 C27.104,20 28,19.104 28,18 C28,16.896 27.104,16 26,16 Z" id="Shape" fill-rule="nonzero"></path>
+                </g>
+            </g>
+            <text id="Lobby" font-family="LucidaGrande-Bold, Lucida Grande" font-size="20" font-weight="bold" fill="#FFFFFF">
+                <tspan x="156.21582" y="21">Lobby</tspan>
+            </text>
+            <g id="ewclogo---White" transform="translate(32.000000, 0.000000)">
+                <g id="ewclogo">
+                    <path d="M24.2570911,2.25592437 L28.5438462,2.1 L29.25,3.59390244 L29.1142895,6.66179342 C29.283564,6.59982709 29.4788008,6.5089596 29.7,6.38919095 L29.6166667,8.15506128 C29.163185,8.28164624 28.7604072,8.28164624 28.4083333,8.15506128 C27.8802226,7.96518384 27.8465354,7.94559841 27.7,7.46594115 C27.5534646,6.98628389 27.7010448,5.34667819 27.45,4.88174066 C27.1989552,4.41680314 27.1134751,4.25722848 26.6166667,4.14955053 C26.1198582,4.04187257 25.6899876,4.48284012 24.8666667,4.32183056 C24.0433457,4.160821 23.9373187,4.14572365 23.5333333,3.54657041 C23.2640098,3.14713492 23.0695653,2.45801479 22.95,1.47921002 L24.2,1.35 C24.1831173,1.64667156 24.2021477,1.94864635 24.2570911,2.25592437 Z M20.2467452,30.0356513 L20,30.3 L17.5416667,30.3 L17.658156,30.15 L14.6576377,30.15 L14.6599209,30.1419509 L14.2989844,30.3 C14.8535969,29.0155559 15.1309032,27.8369845 15.1309032,26.7642857 C15.1309032,25.1552375 14.7600253,25.3145256 14.0494088,22.95 C13.3387922,20.5854744 12.3023794,19.5 12.593551,18.3214286 C12.8847225,17.1428571 13.6750453,16.95 13.6750453,16.2214286 C13.6750453,15.4928571 13.3838738,15 12.3023794,14.8071429 C11.220885,14.6142857 11.475,14.625 11.1792891,14.4642857 C10.8835782,14.3035714 10.7707626,14.0666476 10.3473703,13.7785714 C9.92397806,13.4904952 9.67136489,13.2459476 8.97470439,12.9642857 C8.27804388,12.6826238 8.68353282,12.9 7.06129126,12.45 C5.43904969,12 4.6616327,10.3492026 4.35755531,9.49285714 C4.05347793,8.63651165 4.02050643,8.4787294 3.9,7.35 C3.77949357,6.2212706 3.78896565,6.21595125 3.9,5.20714286 C3.9740229,4.53460393 4.12654134,3.86317535 4.35755531,3.19285714 L4.69032281,1.725 L5.43904969,1.425 C5.38732596,1.68684824 5.33931286,1.94331102 5.29501037,2.19438834 L19.1464476,1.2 L21.525,1.2 L21.525,2.11576166 L21.5833333,2.1 L21.5545137,2.1812518 L21.7862532,2.25 C21.9616175,2.89311771 21.9616175,3.40740342 21.7862532,3.79285714 C21.5232067,4.37103773 21.2464814,4.7683721 20.538375,4.99285714 C19.8302687,5.21734219 18.6020457,4.81071429 18.0010228,4.99285714 C17.6003409,5.11428571 17.0873244,5.47142857 16.4619732,6.06428571 C16.1459968,6.34271019 15.9241518,6.68556733 15.7964382,7.09285714 C15.6048677,7.70379186 15.75,8.4 15.5884585,8.85 C15.4269169,9.3 15.0963456,9.66317005 14.54856,9.75 C14.1833696,9.80788663 13.8090062,9.62217235 13.4254697,9.19285714 C13.1802296,8.71201642 12.889058,8.34058784 12.551955,8.07857143 C12.0463005,7.6855468 11.8198448,7.51017404 11.0545013,7.35 C10.2891577,7.18982596 9.33465684,7.64645623 9.14108814,8.07857143 C9.06264006,8.25369584 8.95583935,8.47517011 8.91042477,8.71160841 L9.13592933,9.54125338 C9.1414994,9.54717626 9.14717957,9.55308495 9.15297139,9.55897893 L11.2494671,10.1473997 L11.2607666,10.153247 C11.8022398,10.2052799 12.2967141,10.2685917 12.551955,10.4785714 C13.1210966,10.9467888 13.2162077,12.9474851 14.7660419,13.2161463 L16.0835511,13.3411409 C16.6723162,13.3573238 17.2421469,13.3174197 17.7930432,13.2214286 C18.4688221,13.1592589 19.0788958,13.3021161 19.6232644,13.65 C20.1838204,14.0082286 20.592097,14.6370627 20.8401928,15.0134753 L22.6270104,16.4711551 C22.7079409,16.5189741 22.776279,16.5520317 22.8261516,16.5642857 C23.0941714,16.6301399 23.7173577,17.0900869 24.1947677,17.443946 L25.118216,18.0107205 C25.3999858,18.1292678 25.7265109,18.2507919 26.1954225,18.5357143 C26.9841403,19.0149588 26.8353282,18.9107143 27.8176641,19.6928571 C28.4725547,20.2142857 28.6389385,21.3428571 28.3168154,23.0785714 C28.2489321,23.7057963 28.0825484,24.220082 27.8176641,24.6214286 C27.4203377,25.2234484 26.5921182,25.725 25.4466957,26.325 C24.3012731,26.925 23.3365593,27.6879823 21.7862532,29.0357143 C20.7527158,29.9342023 20.5170054,30.3056309 21.0791222,30.15 L20.2467452,30.0356513 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    <path d="M37.9259631,28.7018871 L30.1311198,18.0797298 L30.1311198,3.4125 C30.1311198,2.20092533 29.1489445,1.21875 27.9373698,1.21875 L3,1.21875 C2.01624279,1.21875 1.21875,2.01624279 1.21875,3 L1.21875,28.9875 C1.21875,30.1990747 2.20092533,31.18125 3.4125,31.18125 L27.9373698,31.18125 C29.1489445,31.18125 30.1311198,30.1990747 30.1311198,28.9875 L30.1311198,25.1936517 L37.9259631,28.7018871 Z" id="Outer-Border" stroke="#FFFFFF" stroke-width="2.4375"></path>
+                </g>
+            </g>
+        </g>
+        <g id="Mobile-Text-Input" transform="translate(16.000000, 244.000000)" fill="#FFFFFF">
+            <g id="Text-Input">
+                <rect id="Input" fill-opacity="0.1" x="0" y="0" width="343" height="47" rx="11"></rect>
+                <text id="Just-ramble-away…-|" font-family="LucidaGrande-Bold, Lucida Grande" font-size="24" font-weight="bold">
+                    <tspan x="19.111437" y="30">Just ramble away… |</tspan>
+                </text>
+                <g id="Send-Icon" transform="translate(311.818182, 12.000000)">
+                    <path d="M22.8,11.2 L3.15544362e-30,22.4 L2,12.9 L14.9,11.2 L2,9.5 L3.15544362e-30,0 L22.8,11.2 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

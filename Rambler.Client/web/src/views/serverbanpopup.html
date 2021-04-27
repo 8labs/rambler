@@ -1,0 +1,17 @@
+<div class="modal-backdrop channel-ban-modal" ng-cloak>
+  <div class="popup full-popup">
+    <p>You are banning {{ctrl.serverBan.BannedNick}} from the server</p>
+    <input type="text" ng-model="ctrl.serverBan.Reason" placeholder="Reason (e.g. swearing)" />
+    <p>This ban expires on:</p>
+    <p ng-class="{disabled: ctrl.banLength === 365}">
+      <img src="assets/images/calendar.svg" />{{ctrl.serverBan.Expires | localDateFilter}}</p>
+    <ul>
+      <li ng-click="ctrl.setServerBanLength(1)" ng-class="{active: ctrl.banLength === 1}">One Day</li>
+      <li ng-click="ctrl.setServerBanLength(7)" ng-class="{active: ctrl.banLength === 7}">One Week</li>
+      <li ng-click="ctrl.setServerBanLength(30)" ng-class="{active: ctrl.banLength === 30}">One Month</li>
+      <li ng-click="ctrl.setServerBanLength(365)" ng-class="{active: ctrl.banLength === 365}">Permanent</li>
+    </ul>
+    <button class="solid" ng-click="ctrl.saveServerBan()">Ban from Server</button>
+    <button class="outline" ng-click="ctrl.cancelBan()">Cancel</button>
+  </div>
+</div>

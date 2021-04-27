@@ -1,0 +1,42 @@
+.tos {
+    background-color: #ffffff;
+    color: #333333 !important;
+    font-size: 0.8rem;
+    overflow-y: auto;
+    text-align: left;
+    display: block;
+    .close {
+      height: auto;
+      font-size: 1.5rem;
+      position: absolute;
+      right: 2rem;
+      cursor: pointer;
+    }
+    >div {
+      overflow-y: auto;
+      max-height: 70vh;
+
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.25);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333333;
+      }
+
+      p {
+        font-family: 'Muli', sans-serif !important;
+        font-weight: 200 !important;
+        background-color: #ffffff;
+        text-transform: none !important;
+        color: #333333 !important;
+        text-align: left !important;
+        font-size: 0.9rem !important;
+      }
+    }
+  }

@@ -1,0 +1,67 @@
+@import 'common.scss';
+.channel-registration-modal {
+  h1 {
+    font-family: $primary-font;
+    font-size: 1.9rem;
+    color: #FFFFFF;
+    line-height: 45px;
+    margin: 0;
+  }
+  label {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  textarea {
+    background: rgba(0, 0, 0, 0.45) !important;
+    border: none;
+    color: #ffffff;
+    font-family: $primary-font;
+    -webkit-appearance: none;
+    width: calc(100% - 2rem);
+    height: 20vh;
+    resize: none;
+    padding: 1rem;
+    font-size: 1.1.25rem !important;
+  }
+  .checkbox-input {
+    position: relative;
+    width: 100%;
+    label {
+      font-size: 1.25rem;
+    }
+    input {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  form {
+    margin-top: 0;
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+      font-family: $primary-font;
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin: 1.25rem 0;
+      color: #ffffff;
+      background: transparent;
+      -webkit-appearance: none;
+      padding: 0.5rem 0;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      display: block;
+      width: 100%;
+      &::placeholder {
+        font-family: $primary-font;
+        font-weight: 200;
+        color: #ffffff;
+      }
+    }
+    label.validation {
+      font-size: 0.8rem;
+    }
+  }
+}

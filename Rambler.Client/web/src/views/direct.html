@@ -1,0 +1,43 @@
+<style>
+  html,
+  body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+</style>
+
+<link rel="stylesheet" href="css/login.css">
+
+<div class="login">
+  <div class="box">
+    <div class="login-link" ng-click="ctrl.login()">
+      Log in
+    </div>
+    <div class="logo">
+      <img src="assets/images/ewclogo.svg" />
+    </div>
+    <h1>Welcome to {{ctrl.chat.autoJoinChannel}}.</h1>
+    <p ng-if="!ctrl.description">Come chat with us! It's all 🦄s and 🌈s in here.</p>
+    <p ng-if="ctrl.description">{{ctrl.description}}</p>
+    <div class="buttons" ng-if="!ctrl.showCaptcha">
+      <!-- <button class="outline" ng-click="ctrl.loginSocial('Facebook')">Continue with Facebook</button> -->
+      <button class="outline" ng-click="ctrl.login()">Login</button>
+      <button class="solid" ng-click="ctrl.createAccount()">Create Account</button>
+      <p ng-if="ctrl.allowGuests">or start out as a guest</p>
+      <button ng-if="ctrl.allowGuests" class="solid" ng-click="ctrl.guestLogin()">Be Our Guest</button>
+    </div>
+    <div ng-if="ctrl.showCaptcha" class="buttons">
+      <div recaptcha="ctrl.onCaptcha($token)"></div>
+    </div>
+    <div class="fine-print">
+      By the way, we use cookies. By registering or using this system you agree to our
+      <a href ng-click="showTOS = true;">Terms of Service</a>, and any delicious cookies we decide to stuff your browser with. 🍪
+    </div>
+  </div>
+
+  <div ng-include="'views/tos.html'" ng-show="showTOS"></div>
+</div>

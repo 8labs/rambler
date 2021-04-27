@@ -1,0 +1,131 @@
+@import 'common.scss';
+@import 'inputs.scss';
+@import 'popup.scss';
+.intro {
+  overflow-x: hidden;
+
+  .box {
+    background: $app-background;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: $primary-font;
+    font-weight: 300;
+    color: #ffffff;
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      width: 75%;
+      max-width: 50rem;
+      padding: 5rem 0;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      .greeting {
+        width: calc(50% - 5rem);
+        padding: 2.5rem;
+        .logo {
+          img {
+            width: 25%;
+            margin-left: 1.5rem;
+          }
+        }
+        h1 {
+          margin: 1rem;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+        p {
+          margin: 1rem;
+          font-weight: 200;
+        }
+      }
+      .buttons {
+        width: calc(50% - 5rem);
+        align-self: center;
+        padding: 2.5rem;
+        p {
+          margin-left: 1rem;
+        }
+        button {
+          width: calc(100% - 2rem);
+          min-width: 12rem;
+        }
+      }
+      @media only screen and (max-width: 750px) {
+        padding: 0;
+        width: 100%;
+        .greeting {
+          width: calc(100% - 3rem);
+          padding: 1.5rem 1.5rem 0 1.5rem;
+        }
+        .buttons {
+          width: calc(100% - 3rem);
+          padding: 0 1.5rem 1.5rem 1.5rem;
+          p {
+            margin: 0.25rem 1rem;
+          }
+        }
+      }
+    }
+  }
+  .marketing {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    .sidebyside {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      >div {
+        padding: 5%;
+        width: calc(50% - 10%);
+        &.text {
+          align-self: center;
+          h1 {
+            font-family: $primary-font;
+            font-size: 1.5rem;
+            color: #594971;
+          }
+          p {
+            font-family: $primary-font;
+            font-size: 1rem;
+            color: #282B52;
+          }
+        }
+        &.centred {
+          align-self: center;
+          img {
+            margin-left: 50%;
+            transform: translateX(-50%);
+          }
+          button {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            background: #FF8CAE;
+            color: #FFFFFF;
+          }
+        }
+      }
+      @media only screen and (max-width: 750px) {
+        >div {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .fine-print {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 0.5rem 1rem;
+    font-family: $primary-font;
+    cursor: pointer;
+    text-align: center;
+    a {
+      color: #282B52;
+      width: 75%;
+    }
+  }
+}

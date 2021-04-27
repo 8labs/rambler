@@ -1,0 +1,109 @@
+@import 'common.scss';
+.channel-moderator-modal {
+  .popup {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  h1 {
+    font-family: $primary-font;
+    font-size: 1.9rem;
+    color: #FFFFFF;
+    line-height: 45px;
+    margin: 0;
+  }
+  label {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .menu-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+    }
+    .menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      background: $black-popup;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      z-index: 10001;
+      width: max-content;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          cursor: pointer;
+          font-family: $primary-font;
+          font-weight: 200;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+  .moderator-header {
+    img {
+      width: 1rem;
+      margin: 1rem 1.5rem;
+    }
+    label {
+      float: right;
+      margin-right: 0.5rem;
+    }
+  }
+  .moderators {
+    overflow-y: auto;
+    flex-grow: 1;
+    flex: 0 0 1;
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      position: relative;
+      width: 100%;
+      label {
+        font-size: 1.25rem;
+      }
+      input {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      img.delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 1.5rem;
+        cursor: pointer;
+      }
+      .confirm {
+        button {
+          display: inline-block;
+          width: calc(50% - 1rem);
+          margin: 1rem 0;
+          border-radius: 1rem;
+          height: 2.5rem;
+          border-radius: 0.25rem;
+          border: none;
+        }
+        button.danger {
+          background-color: $popup-button;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  
+}

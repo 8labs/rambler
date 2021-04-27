@@ -1,0 +1,46 @@
+<div class="header">
+  <div>
+    <div class="logo desktop-only" ng-click="ctrl.openChannelList()">
+      <img src="assets/images/ewclogo.svg">
+    </div>
+    <div class="logo mobile-only" ng-click="ctrl.mobileMenuOpen = !ctrl.mobileMenuOpen;">
+      <span class="unread" ng-if="ctrl.getUnreadCount()>0"></span>
+      <img src="assets/images/ewclogo.svg">
+    </div>
+    <div class="title" ng-show="ctrl.chat.state.channel">
+      {{ ctrl.chat.state.channel.name }}
+    </div>
+    <div class="description" ng-show="ctrl.chat.state.channel">
+      <span ng-bind-html="ctrl.chat.state.channel.description | profanity | linky:'_blank':{rel: 'nofollow'}"></span>
+    </div>
+    <div class="close" ng-show="ctrl.canCloseCurrentChannel()" ng-click="ctrl.closeCurrent()">
+      &times;
+    </div>
+    <!-- <div class="menu-mobile" ng-click="ctrl.mobileMenuOpen = true;">
+      <img src="assets/images/menu.svg" />
+    </div> -->
+    <div class="icon" ng-show="ctrl.getMyLevel() > 10" ng-click="ctrl.editChannelModerators(ctrl.chat.state.channel)">
+      <img src="assets/images/shield.svg" />
+    </div>
+    <div class="icon" ng-show="ctrl.getMyLevel() >= 10" ng-click="ctrl.editChannelBans(ctrl.chat.state.channel)">
+      <img src="assets/images/ban.svg" />
+    </div>
+    <div class="icon" ng-show="ctrl.getMyLevel() > 10" ng-click="ctrl.editChannel(ctrl.chat.state.channel)">
+      <img src="assets/images/cog.svg" />
+    </div>
+    <div class="icon menu-desktop">
+      <img src="assets/images/menu.svg" ng-click="ctrl.desktopMenuOpen = !ctrl.desktopMenuOpen;" />
+      <div class="menu" ng-show="ctrl.desktopMenuOpen">
+        <ul>
+          <li ng-click="ctrl.openChannelList();" ng-if="!ctrl.isGuest()">Room List</li>
+          <li ng-click="ctrl.openIgnoreList();" ng-if="!ctrl.isGuest()">Ignore List</li>
+          <li ng-click="ctrl.goRegister();" ng-if="ctrl.isGuest()">Register Your Name!</li>
+          <li ng-click="ctrl.setTheme('ewc');" ng-if="!ctrl.isGuest()">EWC Theme</li>
+          <li ng-click="ctrl.setTheme('night');" ng-if="!ctrl.isGuest()">Night Theme</li>
+          <li ng-click="ctrl.setTheme('crazyblue');" ng-if="!ctrl.isGuest()">Crazy Blue Theme</li>
+          <li ng-click="ctrl.logout();">Logout</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

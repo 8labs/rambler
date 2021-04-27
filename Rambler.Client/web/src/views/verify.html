@@ -1,0 +1,22 @@
+<div class="modal-backdrop" ng-if="ctrl.isValidating">
+  <div class="popup pink-circles">
+    <h3 style="text-align: center; color: #ffffff;">Just checking...</h3>
+    <p>This should only take a moment. I'm just making sure everything is ok!</p>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="!ctrl.isValidating && !ctrl.error">
+  <div class="popup pink-circles">
+    <h3 style="text-align: center; color: #ffffff;">That's awesome!</h3>
+    <p>Thanks for verifying your email address. You're all set to chat now!</p>
+    <button class="pink horizontal-buttons" ng-click="ctrl.login()">Well then, let me in!!!</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" ng-if="!ctrl.isValidating && ctrl.error">
+  <div class="popup pink-circles">
+    <h3 style="text-align: center; color: #ffffff;">That's unfortunate...</h3>
+    <p>We weren't able to validate your account. Maybe try again in a bit.</p>
+    <button class="pink horizontal-buttons" ng-click="ctrl.goWait()">Oh... Ok then...</button>
+  </div>
+</div>

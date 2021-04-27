@@ -1,0 +1,34 @@
+<div class="accordion accordion-list" ng-class="{open: ctrl.mobileMenuOpen}" ng-swipe-right="ctrl.mobileMenuOpen = false;">
+  <!-- <button ng-click="ctrl.getRooms();">get rooms</button> -->
+  <div class="accordion-item channel" ng-repeat="channel in ctrl.chat.state.channels | orderBy:['-isRoom', 'name']" ng-class="{active: ctrl.chat.state.channel.id === channel.id, unread: channel.unread}">
+    <label ng-click="ctrl.switchToChannel(channel.id);">{{channel.name}}</label>
+    <div class="inner" ng-show="ctrl.chat.state.channel.id === channel.id && channel.isRoom">
+      <h3>Your Roomies</h3>
+      <ul>
+        <li ng-repeat-start="chuser in ctrl.getChannelUsers() | orderBy:chuser:false:ctrl.userListOrderBy" ng-click="ctrl.toggleSelectedUser(u)" ng-dblclick="ctrl.openDm(u)" ng-context-menu="ctrl.toggleContextMenu(u)" ng-class="{selected: ctrl.selectedUser === u, ignored: ctrl.isUserIgnored(u)}"
+          ng-init="u = ctrl.getUser(chuser.id)">
+          <div class="images">
+            <!-- <div class="avatar">{{ u.avatar }}</div> -->
+            <img class="mod" src="assets/images/shield.svg" ng-if="chuser.modLevel > 1" />
+          </div>
+          <div class="name">{{ u.nick }}</div>
+        </li>
+        <div class="context-menu-backdrop" ng-if="ctrl.userContextMenuVisible && ctrl.contextUser === u" ng-click="ctrl.userContextMenuVisible = false;" ng-context-menu="ctrl.userContextMenuVisible = false;"></div>
+        <div ng-repeat-end class="accordion-context-menu menu" ng-if="ctrl.userContextMenuVisible && ctrl.contextUser === u">
+          <ul>
+            <li ng-click="ctrl.openDm(u);">Private Message</li>
+            <li ng-if="!ctrl.isGuest() && !ctrl.isUserIgnored(u)" ng-click="ctrl.addIgnore(u);">Ignore</li>
+            <li ng-if="!ctrl.isGuest() && ctrl.isUserIgnored(u)" ng-click="ctrl.unIgnore(u);">Unignore</li>
+            <li ng-if="ctrl.getMyLevel() >= 1000" class="separator"></li>
+            <li ng-if="ctrl.getMyLevel() >= 1000" ng-click="ctrl.serverBanUser(u);">Server Ban</li>
+            <li ng-if="!ctrl.isUserGuest(u.id) && ctrl.getMyLevel() >= 100" class="separator"></li>
+            <li ng-if="!ctrl.isUserGuest(u.id) && ctrl.getMyLevel() >= 100" ng-click="ctrl.showConfirmModerator()">Make Moderator</li>
+            <li ng-if="ctrl.getMyLevel() >= 10" class="separator"></li>
+            <li ng-if="ctrl.getMyLevel() >= 10" ng-click="ctrl.banUser(chuser, 1);">Warn</li>
+            <li ng-if="ctrl.getMyLevel() >= 10" ng-click="ctrl.banUser(chuser, 0);">Ban</li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

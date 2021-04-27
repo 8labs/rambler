@@ -1,0 +1,63 @@
+<style>
+  html,
+  body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+</style>
+
+<link rel="stylesheet" href="css/popup.css">
+<div ng-include="'views/channellistpopup.html'" ng-if="ctrl.channelListOpen || (ctrl.isConnected() && !ctrl.isInChannel())"></div>
+<div ng-include="'views/channelsettingpopup.html'" ng-if="ctrl.editingChannel"></div>
+<div ng-include="'views/channelmoderatorpopup.html'" ng-if="ctrl.moderatorList"></div>
+<div ng-include="'views/channelbanpopup.html'" ng-if="ctrl.channelBan"></div>
+<div ng-include="'views/channelbanlistpopup.html'" ng-if="ctrl.banList"></div>
+<div ng-include="'views/serverbanpopup.html'" ng-if="ctrl.serverBan"></div>
+<div ng-include="'views/serverbanlistpopup.html'" ng-if="ctrl.serverBanList"></div>
+<div ng-include="'views/serveruserinfopopup.html'" ng-if="ctrl.sinfo"></div>
+<div ng-include="'views/ignorelistpopup.html'" ng-if="ctrl.showIgnoreList"></div>
+
+<div ng-include="'views/chatpopups.html'"></div>
+
+<div class="chat {{ctrl.chat.theme}}" ng-swipe-left="ctrl.mobileMenuOpen = true;">
+  <div class="chat-screen">
+    <div ng-include="'views/chatheader.html'"></div>
+    <div chat-box id="chat-box" class="chat-box" messages="ctrl.getChannelMessages()" ignores="ctrl.chat.state.ignoreLookup" ng-show="ctrl.chat.state.channel" selected-user="ctrl.selectedUser">
+
+      <div class="chat-bubble" ng-if="ctrl.chat.status == 'CONNECTING'">
+        <div class="chat-text">
+          <div class="text">
+            Connecting...
+          </div>
+        </div>
+      </div>
+      <div class="chat-bubble" ng-if="ctrl.chat.status == 'WAITING'">
+        <div class="chat-text">
+          <div class="text">
+            Waiting to reconnect...
+          </div>
+        </div>
+      </div>
+      <div class="chat-bubble" ng-if="ctrl.chat.status == 'DISCONNECTED'">
+        <div class="chat-text">
+          <div class="text">
+            Not connected...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input" ng-show="ctrl.isInChat()">
+      <input class="chat-msg-input-box" type="text" ng-model="ctrl.chat.state.channel.newMsg" ng-keydown="ctrl.inputKeyPress($event)" placeholder="Just ramble away..." data-lpignore="true">
+      <img class="emoji-icon" src="assets/images/emoji.svg" ng-click="ctrl.showEmojis = !ctrl.showEmojis; ctrl.fetchEmojis('People');" />
+      <img class="send-icon" src="assets/images/send.svg" ng-click="ctrl.send()" />
+      <div ng-include="'views/emojibox.html'" ng-show="ctrl.showEmojis"></div>
+    </div>
+  </div>
+
+  <div ng-include="'views/userlist.html'" ng-show="ctrl.isInChat()"></div>
+</div>

@@ -1,0 +1,35 @@
+<div class="modal-backdrop channel-moderator-modal" ng-cloak>
+  <div class="popup full-popup">
+    <h1>{{ctrl.editingChannel.Name}} Moderators</h1>
+    <div class="menu-icon" ng-click="ctrl.moderatorMenuOpen = !ctrl.moderatorMenuOpen;">
+      <img src="assets/images/verticalmenu.svg" />
+      <div class="menu" ng-show="ctrl.moderatorMenuOpen">
+        <ul>
+          <!-- <li ng-click="ctrl.addNewModerator();">Add Moderator</li> -->
+          <li ng-click="ctrl.removeModeratorMode = true;" ng-show="!ctrl.removeModeratorMode">Remove Moderators</li>
+          <li ng-click="ctrl.removeModeratorMode = false;" ng-show="ctrl.removeModeratorMode">Finished Removing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="moderator-header">
+      <label ng-show="!ctrl.removeModeratorMode">Is Admin</label>
+    </div>
+    <div class="moderators">
+      <ul>
+        <li ng-repeat-start="moderator in ctrl.moderatorList | orderBy:['!Level','Nick']">
+          <label>{{ moderator.Nick }}</label>
+          <input type="checkbox" ng-show="!ctrl.removeModeratorMode" ng-checked="moderator.Level > 10" ng-click="ctrl.toggleModeratorAdmin(moderator)" />
+          <img class="delete" src="assets/images/delete.svg" ng-show="ctrl.removeModeratorMode" ng-click="removingModerator = moderator" />
+        </li>
+        <li ng-repeat-end ng-show="removingModerator === moderator">
+          <p>Are you sure about that?</p>
+          <div class="confirm">
+            <button class="danger" ng-click="removingModerator = undefined; ctrl.removeModerator(moderator)">Oh Yeah!</button>
+            <button ng-click="removingModerator = undefined;">Not So Much</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="solid" ng-click="ctrl.cancelEditModerators()">Finished</button>
+  </div>
+</div>

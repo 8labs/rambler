@@ -1,0 +1,41 @@
+<div class="modal-backdrop server-user-info-modal" ng-cloak>
+  <div class="popup full-popup simple-layout">
+    <h1>Server User Info</h1>
+    <div class="body">
+      <div class="user-info">
+        <p>{{ctrl.sinfo.Info.Nick}}</p>
+        <p>{{ctrl.sinfo.Info.UserId}}</p>
+        <p>Connections: {{ctrl.sinfo.ConnectionCount}}</p>
+      </div>
+
+      <div class="rooms">
+        <h4>Rooms</h4>
+        <ul>
+          <li ng-repeat="r in ctrl.sinfo.Channels">
+            {{r.Name}} | Level: {{r.Level}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="addresses">
+        <h4>Addresses</h4>
+        <ul>
+          <li ng-repeat="ip in ctrl.sinfo.IPAddresses">
+            {{ip}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="related-users">
+        <h4>Related Users</h4>
+        <ul>
+          <li ng-repeat="u in ctrl.sinfo.RelatedUsers">
+            {{u.Nick}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="solid" ng-click="ctrl.closeServerUserInfo()">Finished</button>
+  </div>
+</div>

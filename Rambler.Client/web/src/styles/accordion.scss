@@ -1,0 +1,169 @@
+@import 'common.scss';
+.accordion-list {
+  @include no-selection();
+  width: max-content;
+  max-width: 35%;
+  background: rgba(0, 0, 0, 0.01);
+  margin-top: 1px;
+  margin-bottom: 1px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      cursor: pointer;
+      padding: 0.25rem;
+      display: flex;
+      .images {
+        position: relative;
+        height: 1.25rem;
+        //width: 1.25rem;
+        width: 0.25rem;
+        .avatar {
+          font-size: 1.25rem;
+          line-height: 1.25rem;
+        }
+        img.mod {
+          position: absolute;
+          height: 0.75rem;
+          top: 0;
+          left: -0.5rem;
+        }
+      }
+      .name {
+        margin-left: 0.25rem;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        color: #FFFFFF;
+      }
+    }
+    li.selected {
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 0.5rem;
+    }
+    li.ignored .name{
+     text-decoration: line-through;
+    }
+  }
+  h3 {
+    font-family: $secondary-font-bold;
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin: 0.5rem 0;
+  }
+}
+
+.accordion {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 750px) {
+    z-index: 10001;
+    position: fixed;
+    right: -10rem;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    // transition: width 0.15s ease;
+    &.open {
+      right: 0;
+      width: 75%;
+      max-width: 75%;
+    }
+  }
+  .accordion-item {
+    /* Inactive/default state */
+    background: rgba(0, 0, 0, 0.01);
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    min-height: 3rem;
+    line-height: 1rem;
+    &.active {
+      flex-grow: 1;
+      flex: 0 0 1;
+      display: flex;
+      flex-direction: column;
+      label {
+        background: rgba(0, 0, 0, 0.25);
+      }
+    }
+    &.unread {
+      label {
+        background: rgb(113, 85, 120);
+      }
+    }
+    label {
+      display: block;
+      padding: 1rem;
+      font-family: $secondary-font;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+    }
+    .inner {
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.1);
+      flex-grow: 1;
+      flex: 0 0 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: hidden;
+    }
+    &.unread {
+      /* With unread messages */
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.accordion-context-menu {
+  background: $black-popup;
+  color: #ffffff;
+  padding: 1rem !important;
+  margin: 0.5rem 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  right: 8rem;
+  z-index: 10001;
+  @media only screen and (max-width: 750px) {
+    // mobile safari and chrome both chop the menu
+    // so for mobile, we're just going to position the bugger on top
+    // not pretty, but blech.
+    position: absolute;
+    border: 1px solid #fff;
+    right: 0;
+    left: 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      cursor: pointer;
+      font-family: $primary-font;
+      font-weight: 200;
+      padding: 1rem 0;
+    }
+    li.separator {
+      padding: 0;
+      margin: 0.5rem;
+      height: 1px;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.context-menu-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

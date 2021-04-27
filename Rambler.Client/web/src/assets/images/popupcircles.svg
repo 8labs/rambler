@@ -1,0 +1,27 @@
+
+<svg width="690px" height="296px" viewBox="0 0 690 296" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="33.6005312%" y1="100%" x2="98.0995665%" y2="7.34105033%" id="linearGradient-1">
+            <stop stop-color="#895EE4" offset="0%"></stop>
+            <stop stop-color="#CD7994" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="690" height="296" rx="24"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Night" transform="translate(-376.000000, -364.000000)">
+            <g id="Popup">
+                <g id="Popup-Modal" transform="translate(376.000000, 364.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <circle id="Oval" stroke-opacity="0.1" stroke="#F6F2FF" stroke-width="40" mask="url(#mask-3)" cx="346.5" cy="148.5" r="84.5"></circle>
+                    <circle id="Oval" stroke-opacity="0.05" stroke="#F6F2FF" stroke-width="40" mask="url(#mask-3)" cx="345" cy="148" r="170"></circle>
+                    <circle id="Oval" stroke-opacity="0.03" stroke="#F6F2FF" stroke-width="40" mask="url(#mask-3)" cx="345" cy="148" r="252"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 126.443 117.232">
+  <defs>
+    <style>
+      .cls-1, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-6 {
+        fill: #f35e5e;
+        stroke: #fff;
+        stroke-width: 4px;
+      }
+
+      .cls-7 {
+        font-size: 15px;
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+
+      .cls-8 {
+        stroke: none;
+      }
+
+      .cls-9 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Path_4" data-name="Path 4" class="cls-1" d="M9.642,0,94.979.034a14.274,14.274,0,0,1,14.274,14.274V66.356A14.274,14.274,0,0,1,94.979,80.63L14.191,80.8C6.307,80.8.659,79.184.659,71.3L0,14.308C0,6.424,1.759,0,9.642,0Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 28.277)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.963" y1="0.028" x2="0.416" y2="0.73" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eee"/>
+      <stop offset="1" stop-color="#fafafa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.041" y2="0.95" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0" stop-color="#f8f8f8"/>
+      <stop offset="1" stop-color="#ececec"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.487" y1="0.004" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e0e0e0"/>
+      <stop offset="1" stop-color="#f6f6f6"/>
+    </linearGradient>
+  </defs>
+  <g id="Mail_Icon" data-name="Mail Icon" transform="translate(-1500.653 -410)">
+    <g id="Envelope" transform="translate(1500.653 420.909)">
+      <g id="Mask_Group_1" data-name="Mask Group 1" class="cls-2" transform="translate(0 0)">
+        <path id="Path_5" data-name="Path 5" class="cls-1" d="M9.642,0,94.979.034a14.274,14.274,0,0,1,14.274,14.274V66.356A14.274,14.274,0,0,1,94.979,80.63L14.191,80.8C6.307,80.8.659,79.184.659,71.3L0,14.308C0,6.424,1.759,0,9.642,0Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 28.277)"/>
+        <path id="Path_3" data-name="Path 3" class="cls-3" d="M0,43.264,57.446,0c.722,74.635,1.22,84.06,1.22,84.06Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 51.8, 10.43)"/>
+        <path id="Path_2" data-name="Path 2" class="cls-4" d="M57.171,39.809.334,80.513S-.7,1.809.876,0Z" transform="matrix(0.966, -0.259, 0.259, 0.966, -0.455, 29.484)"/>
+        <path id="Path_1" data-name="Path 1" class="cls-5" d="M54.708,0l59.979,41.171L0,41.874Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 9.9, 66.452)"/>
+      </g>
+    </g>
+    <g id="Count" transform="translate(1587.43 410)">
+      <g id="Ellipse_1" data-name="Ellipse 1" class="cls-6">
+        <circle class="cls-8" cx="14.328" cy="14.328" r="14.328"/>
+        <circle class="cls-9" cx="14.328" cy="14.328" r="12.328"/>
+      </g>
+      <text id="_1" data-name="1" class="cls-7" transform="translate(-0.448 5.776)"><tspan x="10.33" y="14">1</tspan></text>
+    </g>
+  </g>
+</svg>

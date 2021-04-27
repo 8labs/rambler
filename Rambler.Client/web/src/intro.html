@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rambler Chat</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="ewc" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="assets/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="assets/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="assets/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="assets/favicon/mstile-310x310.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-570959-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-570959-3');
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-cookies.min.js"></script>
+
+    <link rel="stylesheet" href="css/intro.css" />
+
+    <!-- <script src="//d2wy8f7a9ursnm.cloudfront.net/v4/bugsnag.min.js"></script>
+  <script>
+    window.bugsnagClient = bugsnag('2bceb7601dcc36cc5530e9ca2260b18b')
+
+  </script> -->
+  </head>
+
+  <body>
+    <div class="intro">
+      <div class="box">
+        <div class="contents">
+          <div class="greeting">
+            <div class="logo">
+              <img src="assets/images/ewclogo.svg" />
+            </div>
+            <h1>Welcome to Rambler.</h1>
+            <p>Come chat with us! It's all 🦄s and 🌈s in here.</p>
+            <p>Chatting for free has never been easier. Give it a spin today from your desktop or smart phone.</p>
+          </div>
+          <div class="buttons">
+            <!-- <button class="outline" ng-click="ctrl.loginSocial('Facebook')">Continue with Facebook</button> -->
+            <button class="outline" ng-click="ctrl.login()">Login</button>
+            <button class="solid" ng-click="ctrl.createAccount()">Create Account</button>
+            <p>or start out as a guest</p>
+            <button class="solid" ng-click="ctrl.guestLogin()">Be Our Guest</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="marketing">
+        <div class="sidebyside">
+          <div class="text">
+            <h1>Chat on the go</h1>
+            <p>
+              Chatting for free on your phone has never been easier. Our chat works great on Android phones and tablets,
+              iPhones, iPads, Windows, Mac, Chromebooks, you name it! No install required. Just start chatting.
+            </p>
+          </div>
+          <div class="centred">
+            <img src="assets/images/screenshots/chat.jpg" />
+          </div>
+        </div>
+        <div class="sidebyside">
+          <div class="centred">
+            <img src="assets/images/screenshots/roomlist.jpg" />
+          </div>
+          <div class="text">
+            <h1>Never miss a beat</h1>
+            <p>
+              We don’t want you to miss a thing, so our mobile chat and desktop chat work together to make sure you see
+              it all. Any messages you send in one will be ready for you in the other. So switching from one device to
+              the other is seamless!
+            </p>
+          </div>
+        </div>
+        <div class="sidebyside">
+          <div class="text">
+            <h1>Get your own chat room</h1>
+            <p>
+              What’s better than finding a bunch of really great chats? Being able to create your own room to chat about
+              anything you want. Meet up with your friends, make new ones. Build a community of great people who love to
+              chat just as much as you do! American chat? German chat? Cat chat? Hat chat? We love to help friendly
+              chats of all sorts from all over the world.
+            </p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="fine-print">
+        By the way, we use cookies. By registering or using this system you agree to our
+        <a href ng-click="showTOS = true;">Terms of Service</a>, and any delicious cookies we decide to stuff your
+        browser with. 🍪
+      </div>
+
+      <div ng-include="'views/tos.html'" ng-show="showTOS"></div>
+    </div>
+  </body>
+</html>

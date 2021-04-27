@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rambler chat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="keywords" content="html5 chat, free chat" />
+    <meta
+      name="description"
+      content="Free desktop and mobile chat rooms. Get an easy to use chat room. Chat now, or add a chat room to your webpage. Come chat with us! It's all 🦄s and 🌈s in here."
+    />
+    <meta name="abstract" content="Free easy to use mobile chat rooms. Chat now." />
+    <meta name="author" content="8labs.com" />
+    <meta name="revisit-after" content="5 days" />
+    <meta name="robots" content="index,follow" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <base href="/" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="ewc" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="assets/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="assets/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="assets/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="assets/favicon/mstile-310x310.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-570959-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-570959-3');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-sanitize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-cookies.min.js"></script>
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- <script src="//d2wy8f7a9ursnm.cloudfront.net/v4/bugsnag.min.js"></script>
+  <script>
+    window.bugsnagClient = bugsnag('2bceb7601dcc36cc5530e9ca2260b18b')
+
+  </script> -->
+  </head>
+
+  <body>
+    <div ng-app="rambler">
+      <div ng-view ng-cloak class="ng-cloak"></div>
+    </div>
+
+    <div id="app-update" name="app-update">
+      <p>It looks like there's an update to the chat!</p>
+      <button onClick="window.location.reload()">Get it now!</button>
+    </div>
+  </body>
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener(
+        'load',
+        function () {
+          var newInstall = !navigator.serviceWorker.controller;
+          navigator.serviceWorker.register('/sw.js').then(function (registration) {
+            registration.addEventListener('updatefound', function () {
+              registration.installing.onstatechange = function () {
+                if (!newInstall && registration.active) {
+                  console.log('A new update!');
+                  document.getElementById('app-update').className += ' active';
+                }
+              };
+            });
+          });
+        },
+        function (err) {
+          console.log('ServiceWorker registration failed: ', err);
+        }
+      );
+    }
+  </script>
+
+  <script type="text/javascript">
+    var gaJsHost = 'https:' == document.location.protocol ? 'https://ssl.' : 'http://www.';
+    document.write(
+      unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")
+    );
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker('UA-570959-1');
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+</html>

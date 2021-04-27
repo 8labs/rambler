@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="css/login.css" />
+
+<div class="login">
+  <div class="modal-backdrop" ng-if="ctrl.registered">
+    <div class="popup pink-circles">
+      <h3 style="text-align: center; color: #ffffff">We’ve sent you an email!</h3>
+      <img src="assets/images/mailicon.svg" style="max-height: 20%" />
+      <p>We know waiting is boring. We just need to verify your email address to keep the chat safe.</p>
+      <button class="pink horizontal-buttons" ng-click="ctrl.goWait()">Ok! I’ll wait!</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" ng-if="ctrl.registering">
+    <div class="popup pink-circles">
+      <h3 style="text-align: center; color: #ffffff">Hold on just a moment!</h3>
+      <p>I'm just attempting to register that account for you....</p>
+    </div>
+  </div>
+
+  <div class="box" ng-if="!ctrl.registered && !ctrl.registering">
+    <form name="ctrl.registrationForm" novalidate ng-submit="ctrl.createAccount()">
+      <input
+        name="nick"
+        type="text"
+        ng-model="ctrl.registrationRequest.Nick"
+        placeholder="Nickname"
+        required
+        pattern="[\w]{1,15}"
+      />
+      <label ng-show="ctrl.registrationForm.nick.$touched && ctrl.registrationForm.nick.$error.required"
+        >Please enter a nickname.</label
+      >
+      <label ng-show="ctrl.registrationForm.nick.$touched && ctrl.registrationForm.nick.$error.pattern"
+        >Nicknames need to be between 1 and 15 characters.</label
+      >
+      <input name="email" type="email" ng-model="ctrl.registrationRequest.Email" placeholder="Email Address" required />
+      <label ng-show="ctrl.registrationForm.email.$touched && ctrl.registrationForm.email.$error.email"
+        >This is not a valid email.</label
+      >
+      <input
+        name="pass"
+        type="password"
+        ng-model="ctrl.registrationRequest.Password"
+        placeholder="Password"
+        required
+        required
+        pattern=".{6,}"
+      />
+      <label ng-show="ctrl.registrationForm.pass.$touched && ctrl.registrationForm.pass.$error.required"
+        >Please enter a password.</label
+      >
+      <label ng-show="ctrl.registrationForm.pass.$touched && ctrl.registrationForm.pass.$error.pattern"
+        >Passwords need to be at least 6 characters long.</label
+      >
+      <input
+        name="passconfirm"
+        type="password"
+        ng-model="ctrl.registrationRequest.PasswordVerify"
+        placeholder="Confirm Password"
+        required
+      />
+      <label
+        ng-show="ctrl.registrationForm.passconfirm.$touched && ctrl.registrationRequest.Password !== ctrl.registrationRequest.PasswordVerify"
+        >Your passwords don't match.</label
+      >
+      <!-- <input type="hidden" ng-model="ctrl.registrationRequest.Captcha" required /> -->
+      <div class="error" ng-show="ctrl.error">
+        {{ ctrl.errorMessage }} <span ng-click="ctrl.clearErrors()" class="close">&times;</span>
+      </div>
+
+      <!-- <div recaptcha="ctrl.onCaptcha($token)"></div> -->
+
+      <div class="buttons">
+        <button
+          type="submit"
+          class="solid"
+          ng-disabled="ctrl.registrationForm.$invalid || ctrl.registrationRequest.Password !== ctrl.registrationRequest.PasswordVerify"
+        >
+          Create Account
+        </button>
+      </div>
+    </form>
+    <!--
+      <div class="option-text">or join with</div>
+      <div class="social">
+        <a href ng-click="ctrl.loginSocial('Facebook')">
+          <img src="assets/images/facebook.svg" />
+        </a>
+        <a href ng-click="ctrl.loginSocial(" Google ")">
+          <img src="assets/images/google.svg" />
+        </a>
+        <a href ng-click="ctrl.loginSocial('Twitter')">
+          <img src="assets/images/twitter.svg" />
+        </a>
+      </div>
+    -->
+
+    <div class="fine-print" ng-click="ctrl.login()">Already a member? <a href>Log in.</a></div>
+  </div>
+</div>
