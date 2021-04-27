@@ -16,6 +16,7 @@ Rambler is a chat server and browser based chat (desktop and mobile) originally 
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -135,3 +136,7 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 Project Link: [https://github.com/8labs/rambler](https://github.com/8labs/rambler)
+
+## License
+
+Rambler is currently lisensed under GNU AGPLv3.
